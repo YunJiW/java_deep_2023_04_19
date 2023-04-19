@@ -56,4 +56,12 @@ public class MyArrayList<T> {
     }
 
 
+    public boolean contains(String element) {
+        for(int idx =0; idx < size;idx++) {
+            if(data[idx].equals(element)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -7,8 +7,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class MyArrayListTest {
     private MyArrayList<String> list;
@@ -79,6 +78,7 @@ public class MyArrayListTest {
 
 
     @Test
+    @DisplayName("리스트에서 사용되는 삭제 기능 구현해보기")
     void testRemove() {
         list.add("Element1");
         list.add("Element2");
@@ -86,5 +86,16 @@ public class MyArrayListTest {
         assertEquals("Element2", list.remove(1));
         assertEquals(2, list.size());
     }
+
+    @Test
+    @DisplayName("리스트에서 사용되는 contain 구현")
+    void testContains() {
+        list.add("Element1");
+        list.add("Element2");
+        assertTrue(list.contains("Element1"));
+        assertFalse(list.contains("Element3"));
+
+    }
+
 
 }
