@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-19T05:40:07" hostname="DESKTOP-RDGCD11" time="0.023">
+<testsuite name="com.ll.exam1.MyArrayListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-19T05:49:29" hostname="DESKTOP-RDGCD11" time="0.073">
   <properties/>
-  <testcase name="test Get" classname="com.ll.exam1.MyArrayListTest" time="0.023"/>
+  <testcase name="testSize" classname="com.ll.exam1.MyArrayListTest" time="0.066"/>
+  <testcase name="test Add" classname="com.ll.exam1.MyArrayListTest" time="0.003"/>
+  <testcase name="test get(1)" classname="com.ll.exam1.MyArrayListTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -32,6 +32,7 @@ public class MyArrayListTest {
         MyArrayList<String> list = new MyArrayList<>();
         list.add("Element1");
         list.add("Element2");
-        assertEquals("Element2", list.get(1));
+        assertThat(list.get(0)).isEqualTo("Element1");
+        assertThat(list.get(1)).isEqualTo("Element2");
     }
 }
