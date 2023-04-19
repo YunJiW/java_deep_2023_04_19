@@ -94,8 +94,19 @@ public class MyArrayListTest {
         list.add("Element2");
         assertTrue(list.contains("Element1"));
         assertFalse(list.contains("Element3"));
-
     }
+
+    @Test
+    @DisplayName("List에서 사용되는 indexOf 구현")
+    void testIndexOf() {
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element1");
+        assertEquals(0, list.indexOf("Element1"));
+        assertEquals(1, list.indexOf("Element2"));
+        assertEquals(-1, list.indexOf("Element3"));
+    }
+
 
 
 }

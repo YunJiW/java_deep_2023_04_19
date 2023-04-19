@@ -64,4 +64,13 @@ public class MyArrayList<T> {
         }
         return false;
     }
+
+    public int indexOf(String element1) {
+        for(int idx =0; idx <size;idx++){
+            if(data[idx].equals(element1)){
+                return idx;
+            }
+        }
+        return -1;
+    }
 }

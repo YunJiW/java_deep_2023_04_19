@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-19T06:41:41" hostname="DESKTOP-RDGCD11" time="0.018">
+<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-19T06:46:29" hostname="DESKTOP-RDGCD11" time="0.021">
   <properties/>
-  <testcase name="리스트에서 사용되는 contain 구현" classname="com.ll.exam1.MyArrayListTest" time="0.018"/>
+  <testcase name="List에서 사용되는 indexOf 구현" classname="com.ll.exam1.MyArrayListTest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
