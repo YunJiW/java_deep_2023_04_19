@@ -12,6 +12,3 @@ public class Main {
     }
 }
 
-class MyArrayList<T> {
-
-}
