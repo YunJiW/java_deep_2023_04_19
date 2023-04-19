@@ -35,4 +35,15 @@ public class MyArrayListTest {
         assertThat(list.get(0)).isEqualTo("Element1");
         assertThat(list.get(1)).isEqualTo("Element2");
     }
+
+    @Test
+    @DisplayName("data의 크기가 자동으로 늘어나야함.")
+    void t4() {
+        MyArrayList<String> list = new MyArrayList<>();
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element3");
+
+        assertThat(list.size()).isEqualTo(3);
+    }
 }

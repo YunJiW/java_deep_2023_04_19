@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ll.exam1.MyArrayListTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2023-04-19T05:49:29" hostname="DESKTOP-RDGCD11" time="0.073">
+<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-19T06:25:15" hostname="DESKTOP-RDGCD11" time="0.055">
   <properties/>
-  <testcase name="testSize" classname="com.ll.exam1.MyArrayListTest" time="0.066"/>
-  <testcase name="test Add" classname="com.ll.exam1.MyArrayListTest" time="0.003"/>
-  <testcase name="test get(1)" classname="com.ll.exam1.MyArrayListTest" time="0.002"/>
+  <testcase name="data의 크기가 자동으로 늘어나야함." classname="com.ll.exam1.MyArrayListTest" time="0.055"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
