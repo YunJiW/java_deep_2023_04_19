@@ -18,9 +18,20 @@ public class MyArrayListTest {
     }
 
     @Test
-    void testAdd() {
+    @DisplayName("test Add")
+    void t2() {
         MyArrayList<String> list = new MyArrayList<>();
         assertTrue(list.add("Element1"));
-        assertEquals(1, list.size());
+        assertThat(list.size()).isEqualTo(1);
+    }
+
+
+    @Test
+    @DisplayName("test get(1)")
+    void t3() {
+        MyArrayList<String> list = new MyArrayList<>();
+        list.add("Element1");
+        list.add("Element2");
+        assertEquals("Element2", list.get(1));
     }
 }
