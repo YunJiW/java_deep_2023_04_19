@@ -2,6 +2,7 @@ package com.ll.exam1;
 
 import com.ll.TestUt;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class MyArrayListTest {
+    private MyArrayList<String> list;
 
+    @BeforeEach
+    void setUp() {
+        list = new MyArrayList<>();
+    }
     @Test
     @DisplayName("testSize")
     void t1() {
@@ -70,4 +76,15 @@ public class MyArrayListTest {
 
         assertThat(list.size()).isEqualTo(3);
     }
+
+
+    @Test
+    void testRemove() {
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element3");
+        assertEquals("Element2", list.remove(1));
+        assertEquals(2, list.size());
+    }
+
 }

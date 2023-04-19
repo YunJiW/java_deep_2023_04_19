@@ -16,6 +16,7 @@ public class MyArrayList<T> {
         return true;
     }
 
+    //배열이 충분한지 체크
     private void makeNewDataIfNotEnough() {
         if(ifNotEnough())
         {
@@ -42,4 +43,17 @@ public class MyArrayList<T> {
     public String get(int i) {
         return data[i];
     }
+
+    public String remove(int i) {
+        String remove_data = data[i];
+        for(int idx = i; idx < size-1;idx++){
+            data[idx] = data[i+1];
+        }
+        //배열의 크기는 줄지 않고 내가 쓰고있는 size를 줄인다.
+        size-=1;
+
+        return remove_data;
+    }
+
+
 }
