@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-19T05:25:39" hostname="DESKTOP-RDGCD11" time="0.019">
+  <properties/>
+  <testcase name="testSize()" classname="com.ll.exam1.MyArrayListTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
