@@ -1,5 +1,6 @@
 package com.ll.exam1;
 
+import com.ll.TestUt;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -43,6 +44,29 @@ public class MyArrayListTest {
         list.add("Element1");
         list.add("Element2");
         list.add("Element3");
+
+        assertThat(list.size()).isEqualTo(3);
+    }
+
+
+    @Test
+    @DisplayName("늘어나는지 자세히 비교")
+    void t5() {
+        MyArrayList<String> list = new MyArrayList<>();
+
+        String[] data = TestUt.getFieldValue(list, "data", null);
+        assertThat(data.length).isEqualTo(2);
+
+        list.add("사과");
+        list.add("포도");
+
+        data = TestUt.getFieldValue(list, "data", null);
+        assertThat(data.length).isEqualTo(2);
+
+        list.add("당근");
+
+        data = TestUt.getFieldValue(list, "data", null);
+        assertThat(data.length).isEqualTo(4);
 
         assertThat(list.size()).isEqualTo(3);
     }
