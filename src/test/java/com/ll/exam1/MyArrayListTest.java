@@ -115,6 +115,9 @@ public class MyArrayListTest {
         list.clear();
         assertEquals(0, list.size());
         assertTrue(list.isEmpty());
+
+        list.add("사과");
+        assertEquals(1, list.size());
     }
 
 

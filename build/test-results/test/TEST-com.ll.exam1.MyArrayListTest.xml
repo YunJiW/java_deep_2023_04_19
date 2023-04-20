@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ll.exam1.MyArrayListTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-04-20T00:09:19" hostname="DESKTOP-RDGCD11" time="0.104">
+<testsuite name="com.ll.exam1.MyArrayListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-20T00:39:12" hostname="DESKTOP-RDGCD11" time="0.025">
   <properties/>
-  <testcase name="testClear()" classname="com.ll.exam1.MyArrayListTest" time="0.02"/>
-  <testcase name="testSize" classname="com.ll.exam1.MyArrayListTest" time="0.062"/>
-  <testcase name="test Add" classname="com.ll.exam1.MyArrayListTest" time="0.001"/>
-  <testcase name="test get(1)" classname="com.ll.exam1.MyArrayListTest" time="0.004"/>
-  <testcase name="data의 크기가 자동으로 늘어나야함." classname="com.ll.exam1.MyArrayListTest" time="0.001"/>
-  <testcase name="늘어나는지 자세히 비교" classname="com.ll.exam1.MyArrayListTest" time="0.003"/>
-  <testcase name="리스트에서 사용되는 contain 구현" classname="com.ll.exam1.MyArrayListTest" time="0.002"/>
-  <testcase name="List에서 사용되는 indexOf 구현" classname="com.ll.exam1.MyArrayListTest" time="0.0"/>
-  <testcase name="리스트에서 사용되는 삭제 기능 구현해보기" classname="com.ll.exam1.MyArrayListTest" time="0.003"/>
+  <testcase name="testClear()" classname="com.ll.exam1.MyArrayListTest" time="0.025"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -2,10 +2,18 @@ package com.ll.exam1;
 
 public class MyArrayList<T> {
 
-    private String[] data = new String[2];
+    private String[] data;
     private int size = 0;
     public int size() {
         return size;
+    }
+
+    public MyArrayList() {
+        data = new String[2];
+    }
+
+    public MyArrayList(int dataLength){
+        data = new String[dataLength];
     }
 
     public boolean add(T element) {
@@ -25,8 +33,13 @@ public class MyArrayList<T> {
     }
 
     private void makeNewData() {
-        //2배로 늘려서 새로 생성
-        String[] newData = new String[data.length *2];
+        String[] newData;
+        if(data.length != 0) {
+            //2배로 늘려서 새로 생성
+            newData= new String[data.length * 2];
+        }else {
+            newData = new String[50];
+        }
 
         for(int idx = 0; idx < data.length;idx++)
         {
