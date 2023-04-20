@@ -15,3 +15,7 @@
 - [x] indexOf 구현
 - [x] clear 구현
   - size를 0으로 바꿔주고 data 배열을 0으로 초기화한다.
+
+---
+
+- HashMap 직접 구현
