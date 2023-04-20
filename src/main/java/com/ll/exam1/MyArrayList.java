@@ -1,5 +1,7 @@
 package com.ll.exam1;
 
+import java.util.function.Predicate;
+
 public class MyArrayList<T> {
 
     private Object[] data;
@@ -95,9 +97,9 @@ public class MyArrayList<T> {
         return false;
     }
 
-    public int indexOf(T element1) {
+    public int indexOf(T element) {
         for(int idx =0; idx <size;idx++){
-            if(data[idx].equals(element1)){
+            if(data[idx].equals(element)){
                 return idx;
             }
         }
@@ -114,8 +116,14 @@ public class MyArrayList<T> {
             return true;
         return false;
     }
-
-    public void removeIf(Object element2) {
+    public void removeIf(Predicate<T> predicate) {
+        int i = 0;
+        for (int j = 0; j < size; j++) {
+            if (!predicate.test((T)data[j])) {
+                data[i++] = data[j];
+            }
+        }
+        size = i;
     }
 
     public void set(int index, T element) {

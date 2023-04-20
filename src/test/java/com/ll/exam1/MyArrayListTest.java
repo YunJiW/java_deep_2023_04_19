@@ -173,5 +173,15 @@ public class MyArrayListTest {
         assertThat(list.get(0)).isEqualTo("Element4");
     }
 
+    @Test
+    @DisplayName("removeif 구현")
+    void t14(){
+        list.add("Element1");
+        list.add("Element2");
+
+        list.removeIf(e -> e.equals("Element2"));
+        assertThat(list.size()).isEqualTo(1);
+    }
+
 
 }
