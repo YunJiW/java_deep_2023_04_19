@@ -4,42 +4,47 @@ import java.util.HashMap;
 
 public class MyhashMap<K,V> {
 
-    private final Object[] keys;
-    private final Object[] values;
+    private final Entry[] entries;
 
     private int size =0;
+
+    private static class Entry<K,V>{
+        K key;
+        V value;
+
+        public Entry(K key, V value){
+            this.key = key;
+            this.value =value;
+        }
+
+    }
+
+
 
     public MyhashMap(){
         this(2);
     }
 
     public MyhashMap(int arrayLength){
-        keys = new Object[arrayLength];
-        values = new Object[arrayLength];
+        entries = new Entry[arrayLength];
     }
-
-
 
     public int size() {
         return size;
     }
 
     public V put(K key, V value){
-        
-        //key를 myhashMap에 없는 경우
-        if(indexOfKey(key) == -1) {
-            keys[size] = key;
-            values[size] = value;
+
+        int indexOfKey = indexOfKey(key);
+        //key를 myhashMap이 가지고 있지 않은 경우
+        if(indexOfKey == -1) {
+            entries[size] = new Entry<>(key,value);
             size++;
 
             return null;
         }
 
-        V beforeValue = (V)values[indexOfKey(key)];
-        values[indexOfKey(key)] = value;
-
-        return beforeValue;
-
+        return (V)entries[indexOfKey].value;
     }
 
     public V get(K key) {
@@ -47,12 +52,12 @@ public class MyhashMap<K,V> {
 
         if(indexOfKey == -1) return null;
 
-        return (V)values[indexOfKey];
+        return (V)entries[indexOfKey].value;
     }
 
     private int indexOfKey(K key) {
         for(int idx = 0; idx <size;idx++){
-            if(key.equals(keys[idx]))
+            if(key.equals(entries[idx].key))
                 return idx;
         }
         return -1;
