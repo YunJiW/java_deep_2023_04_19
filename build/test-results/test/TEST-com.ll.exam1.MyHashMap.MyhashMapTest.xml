@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.ll.exam1.MyHashMap.MyhashMapTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-20T06:06:22" hostname="DESKTOP-RDGCD11" time="0.02">
+<testsuite name="com.ll.exam1.MyHashMap.MyhashMapTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2023-04-20T08:07:23" hostname="DESKTOP-RDGCD11" time="0.14">
   <properties/>
-  <testcase name="remove 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.02"/>
+  <testcase name="size()" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.089"/>
+  <testcase name="put 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.003"/>
+  <testcase name="GET 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.001"/>
+  <testcase name="Size 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.013"/>
+  <testcase name="remove 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.005"/>
+  <testcase name="containsKey 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.005"/>
+  <testcase name="containsValue 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.003"/>
+  <testcase name="clear" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.005"/>
+  <testcase name="replace 구현" classname="com.ll.exam1.MyHashMap.MyhashMapTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

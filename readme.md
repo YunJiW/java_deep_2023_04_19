@@ -19,7 +19,14 @@
 ---
 
 - HashMap 비슷하게 구현(배열을 써서)
-  - [ ] put 구현
-  - [ ] get 구현
-  - [ ] size 구현
+  - [x] put 구현
+    - indexOfKey를 통해서 이미 가지고있는지 체크
+    - 가지고있는경우 value를 바꿔준다.
+    - 없는 경우 size를 늘려주고 넣어준다.
+  - [x] get 구현
+  - [x] size 구현
     - size를 초과했을경우 늘려줌
+  - [x] remove 구현
+  - [x] contains 구현
+  - [x] isEmpty() 구현
+  - [x] clear 구현

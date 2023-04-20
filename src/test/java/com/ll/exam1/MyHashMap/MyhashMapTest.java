@@ -1,17 +1,19 @@
 package com.ll.exam1.MyHashMap;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.MethodName.class)
 class MyhashMapTest {
+    private MyhashMap<String, Integer> map;
 
+    @BeforeEach
+    void setUp() {
+        map = new MyhashMap<>();
+    }
 
 
     @Test
@@ -70,5 +72,44 @@ class MyhashMapTest {
         assertNull(map.remove("Key3"));
         assertEquals(1, map.size());
     }
+
+    @Test
+    @DisplayName("replace 구현")
+    void t6(){
+        map.put("Key1", 1);
+        assertEquals(Integer.valueOf(1), map.put("Key1", 2));
+        assertEquals(1, map.size());
+    }
+
+    @Test
+    @DisplayName("containsKey 구현")
+    void t07(){
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        assertTrue(map.containsKey("Key1"));
+        assertFalse(map.containsKey("Key3"));
+    }
+
+    @Test
+    @DisplayName("containsValue 구현")
+    void t08(){
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        assertTrue(map.containsValue(1));
+        assertFalse(map.containsValue(3));
+    }
+
+    @Test
+    @DisplayName("clear")
+    void t09() {
+
+        map.put("철수", 22);
+        map.put("영희", 23);
+        map.clear();
+
+        assertThat(map.size()).isEqualTo(0);
+        assertThat(map.isEmpty()).isTrue();
+    }
+
 
 }

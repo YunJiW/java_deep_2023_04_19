@@ -8,6 +8,18 @@ public class MyhashMap<K,V> {
 
     private int size =0;
 
+    public void clear() {
+        for(int idx= 0; idx <size;idx++){
+            entries[idx] = null;
+        }
+        size = 0;
+    }
+
+    public boolean isEmpty(){
+        if(size == 0)
+            return true;
+        return false;
+    }
 
 
     private static class Entry<K,V>{
@@ -101,6 +113,29 @@ public class MyhashMap<K,V> {
         return (V)entries[indexOfKey].value;
     }
 
+    public boolean containsKey(K key) {
+        if(indexOfKey(key) != -1){
+            return true;
+        }
+        return false;
+    }
+
+    public boolean containsValue(V value) {
+        if(indexOfValue(value) == -1)
+            return false;
+
+        return true;
+    }
+
+    private int indexOfValue(V value) {
+        for(int idx = 0; idx <size;idx++){
+            if(value.equals(entries[idx].value))
+                return idx;
+        }
+        return -1;
+    }
+
+
     private int indexOfKey(K key) {
         for(int idx = 0; idx <size;idx++){
             if(key.equals(entries[idx].key))
@@ -108,4 +143,5 @@ public class MyhashMap<K,V> {
         }
         return -1;
     }
+
 }
