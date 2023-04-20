@@ -2,24 +2,24 @@ package com.ll.exam1;
 
 public class MyArrayList<T> {
 
-    private String[] data;
+    private Object[] data;
     private int size = 0;
     public int size() {
         return size;
     }
 
     public MyArrayList() {
-        data = new String[2];
+        data = new Object[2];
     }
 
     public MyArrayList(int dataLength){
-        data = new String[dataLength];
+        data = new Object[dataLength];
     }
 
     public boolean add(T element) {
 
         makeNewDataIfNotEnough();
-        data[size] = (String)element;
+        data[size] = (T) element;
         size+=1;
         return true;
     }
@@ -33,12 +33,12 @@ public class MyArrayList<T> {
     }
 
     private void makeNewData() {
-        String[] newData;
+        Object[] newData;
         if(data.length != 0) {
             //2배로 늘려서 새로 생성
-            newData= new String[data.length * 2];
+            newData= new Object[data.length * 2];
         }else {
-            newData = new String[50];
+            newData = new Object[2];
         }
 
         for(int idx = 0; idx < data.length;idx++)
@@ -53,12 +53,12 @@ public class MyArrayList<T> {
         return  size >= data.length;
     }
 
-    public String get(int i) {
-        return data[i];
+    public T get(int i) {
+        return (T)data[i];
     }
 
-    public String remove(int i) {
-        String remove_data = data[i];
+    public T remove(int i) {
+        T remove_data = (T)data[i];
         for(int idx = i; idx < size-1;idx++){
             data[idx] = data[i+1];
         }
@@ -69,7 +69,7 @@ public class MyArrayList<T> {
     }
 
 
-    public boolean contains(String element) {
+    public boolean contains(T element) {
         for(int idx =0; idx < size;idx++) {
             if(data[idx].equals(element)){
                 return true;
@@ -78,7 +78,7 @@ public class MyArrayList<T> {
         return false;
     }
 
-    public int indexOf(String element1) {
+    public int indexOf(T element1) {
         for(int idx =0; idx <size;idx++){
             if(data[idx].equals(element1)){
                 return idx;

@@ -40,6 +40,14 @@ public class MyArrayListTest {
         list.add("Element2");
         assertThat(list.get(0)).isEqualTo("Element1");
         assertThat(list.get(1)).isEqualTo("Element2");
+
+        MyArrayList<Integer> list2= new MyArrayList<>();
+        list2.add(1);
+        list2.add(2);
+        assertThat(list2.get(0)).isEqualTo(1);
+
+
+
     }
 
     @Test
@@ -59,7 +67,7 @@ public class MyArrayListTest {
     void t5() {
         MyArrayList<String> list = new MyArrayList<>();
 
-        String[] data = TestUt.getFieldValue(list, "data", null);
+        Object[] data = TestUt.getFieldValue(list, "data", null);
         assertThat(data.length).isEqualTo(2);
 
         list.add("사과");
@@ -79,7 +87,7 @@ public class MyArrayListTest {
 
     @Test
     @DisplayName("리스트에서 사용되는 삭제 기능 구현해보기")
-    void testRemove() {
+    void t6() {
         list.add("Element1");
         list.add("Element2");
         list.add("Element3");
@@ -89,7 +97,7 @@ public class MyArrayListTest {
 
     @Test
     @DisplayName("리스트에서 사용되는 contain 구현")
-    void testContains() {
+    void t7() {
         list.add("Element1");
         list.add("Element2");
         assertTrue(list.contains("Element1"));
@@ -98,7 +106,7 @@ public class MyArrayListTest {
 
     @Test
     @DisplayName("List에서 사용되는 indexOf 구현")
-    void testIndexOf() {
+    void t8() {
         list.add("Element1");
         list.add("Element2");
         list.add("Element1");
@@ -108,7 +116,8 @@ public class MyArrayListTest {
     }
 
     @Test
-    void testClear() {
+    @DisplayName("Clear 구현")
+    void t9() {
         list.add("Element1");
         list.add("Element2");
         list.add("Element3");
@@ -120,5 +129,22 @@ public class MyArrayListTest {
         assertEquals(1, list.size());
     }
 
+    @Test
+    @DisplayName("제네릭 타입 체크")
+    void t10() {
+        MyArrayList<Boolean> list3 = new MyArrayList<>();
+        list3.add(true);
+        list3.add(false);
+        assertTrue(list3.get(0));
+        assertFalse(list3.get(1));
+
+        MyArrayList<Integer> list2= new MyArrayList<>();
+        list2.add(1);
+        list2.add(2);
+        assertThat(list2.get(0)).isEqualTo(1);
+
+
+
+    }
 
 }
