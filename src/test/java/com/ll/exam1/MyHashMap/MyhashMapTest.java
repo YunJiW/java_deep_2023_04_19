@@ -46,5 +46,29 @@ class MyhashMapTest {
         assertThat(age철수).isEqualTo(22);
 
     }
+    
+    @Test
+    @DisplayName("Size 구현")
+    void t04(){
+        MyhashMap<String,Integer> map =new MyhashMap<>();
+
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        map.put("Key3", 3);
+
+        assertEquals(3,map.size());
+    }
+
+    @Test
+    @DisplayName("remove 구현")
+    void t05(){
+        MyhashMap<String,Integer> map =new MyhashMap<>();
+
+        map.put("Key1", 1);
+        map.put("Key2", 2);
+        assertEquals(Integer.valueOf(1), map.remove("Key1"));
+        assertNull(map.remove("Key3"));
+        assertEquals(1, map.size());
+    }
 
 }
