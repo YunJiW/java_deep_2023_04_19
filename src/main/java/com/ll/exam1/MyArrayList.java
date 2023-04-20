@@ -23,6 +23,23 @@ public class MyArrayList<T> {
         size+=1;
         return true;
     }
+    public boolean add(int index,T element) {
+
+        makeNewDataIfNotEnough();
+
+        makeEmptyIndex(index);
+
+        data[index] = element;
+        size+=1;
+
+        return true;
+    }
+
+    private void makeEmptyIndex(int index) {
+        for(int idx =size-1; idx >= index ; idx--){
+            data[idx+1] =data[idx];
+        }
+    }
 
     //배열이 충분한지 체크
     private void makeNewDataIfNotEnough() {
@@ -96,5 +113,12 @@ public class MyArrayList<T> {
         if(size == 0)
             return true;
         return false;
+    }
+
+    public void removeIf(Object element2) {
+    }
+
+    public void set(int index, T element) {
+        data[index] = element;
     }
 }

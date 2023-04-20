@@ -6,6 +6,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -38,6 +40,7 @@ public class MyArrayListTest {
         MyArrayList<String> list = new MyArrayList<>();
         list.add("Element1");
         list.add("Element2");
+
         assertThat(list.get(0)).isEqualTo("Element1");
         assertThat(list.get(1)).isEqualTo("Element2");
 
@@ -143,8 +146,32 @@ public class MyArrayListTest {
         list2.add(2);
         assertThat(list2.get(0)).isEqualTo(1);
 
-
-
     }
+
+
+    @Test
+    @DisplayName("add(index,Element) 구현")
+    void t12(){
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element4");
+        list.add(1,"Element3");
+
+        assertThat(list.get(0)).isEqualTo("Element1");
+        assertThat(list.get(1)).isEqualTo("Element3");
+        assertThat(list.get(2)).isEqualTo("Element2");
+        assertThat(list.get(3)).isEqualTo("Element4");
+    }
+
+    @Test
+    @DisplayName("set 구현")
+    void t13(){
+        list.add("Element1");
+        list.add("Element2");
+        list.set(0,"Element4");
+
+        assertThat(list.get(0)).isEqualTo("Element4");
+    }
+
 
 }
