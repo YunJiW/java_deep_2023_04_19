@@ -107,6 +107,15 @@ public class MyArrayListTest {
         assertEquals(-1, list.indexOf("Element3"));
     }
 
+    @Test
+    void testClear() {
+        list.add("Element1");
+        list.add("Element2");
+        list.add("Element3");
+        list.clear();
+        assertEquals(0, list.size());
+        assertTrue(list.isEmpty());
+    }
 
 
 }

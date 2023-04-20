@@ -73,4 +73,15 @@ public class MyArrayList<T> {
         }
         return -1;
     }
+
+    public void clear() {
+        size = 0;
+        data = new String[size];
+    }
+
+    public boolean isEmpty() {
+        if(size == 0)
+            return true;
+        return false;
+    }
 }
